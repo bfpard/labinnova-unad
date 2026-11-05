@@ -1,0 +1,66 @@
+.style__title() {
+  color: #005883;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+}
+
+.boxmenu-item {
+  width: 100%!important;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .menu-item {
+    &__title-inner {
+      .style__title;
+      text-align: left;
+      font-size: 1.7rem;
+    }
+  }
+}
+
+.boxmenu {
+  &__title {
+    .menu {
+      &__title-inner {
+        .style__title;
+      }
+    }
+    .page {
+      &__title-inner {
+        .style__title;
+      }
+    }
+  }
+}
+
+.page {
+  &__header-inner {
+    .page {
+      &__title {
+        .style__title;
+      }
+    }
+  }
+}
+
+.component {
+  &__inner {
+    .component {
+      &__title-inner {
+        .style__title;
+      }
+    }
+  }
+}
+
+.block {
+  &__inner {
+    .block {
+      &__title-inner {
+        .style__title;
+      }
+    }
+  }
+}

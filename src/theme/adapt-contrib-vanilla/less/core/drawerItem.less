@@ -1,0 +1,48 @@
+.drawer {
+  &__item-btn {
+    display: block;
+    padding: @item-padding;
+    background-color: #FFF;
+    border-bottom: 1px solid #005883;
+    color: #005883;
+
+    .no-touch &:not(.is-disabled):not(.is-locked):hover {
+      background-color: #FFF;
+      color: #005883;
+      box-shadow: inset 0 -0.625rem 0 -0.4375rem #005883;
+      .transition(box-shadow @duration ease-in, color @duration ease-in;);
+    }
+  }
+
+  &__item-btn.is-disabled {
+    background-color: @disabled;
+    color: @disabled-inverted;
+  }
+
+  &__item-btn.is-selected {
+    background-color: @drawer-item-selected;
+    color: @drawer-item-inverted-selected;
+  }
+
+  &__item-title {
+    margin-bottom: @drawer-title-margin;
+    .drawer-item-title;
+    font-weight: bold;
+    text-align: left;
+
+    .dir-rtl & {
+      text-align: right;
+    }
+  }
+
+  &__item-body {
+    margin-bottom: @drawer-body-margin;
+    .drawer-item-body;
+    font-weight: bold;
+    text-align: left;
+
+    .dir-rtl & {
+      text-align: right;
+    }
+  }
+}

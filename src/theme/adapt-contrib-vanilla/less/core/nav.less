@@ -1,0 +1,38 @@
+.nav {
+  background-color: #005883;
+  padding: 0 6rem;
+
+  &__inner {
+    max-width: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__btn {
+    background-color: #005883;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+
+    .no-touch &:not(.is-disabled):not(.is-locked):hover {
+      background-color: darken(#005883, 5%);
+      color: #FFF;
+      .transition(background-color @duration ease-in, color @duration ease-in; );
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .nav {
+    padding: 0 .5rem !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .nav {
+    img {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,393 @@
+{
+  "title": "Prueba",
+  "displayTitle": "Prueba",
+  "body": "<p><br /><span style=\"font-size:16px;\"><span style=\"font-variant: normal; white-space: pre-wrap;\"><span style=\"font-family:'Times New Roman',serif\"><span style=\"color:#000000\"><span style=\"font-weight:400\"><span style=\"font-style:normal\"><span style=\"text-decoration:none\">Recurso digital gamificado en el que los niños deben superar diferentes retos relacionados con las vocales, donde la participación se realiza por medio de botones interactivos</span></span></span></span></span></span></span></p>",
+  "typeCourse": "RDE",
+  "subtitle": "Exploradores de vocales ",
+  "description": "REDI (Recurso Educativo Digital Interactivo)",
+  "instruction": "",
+  "_htmlClasses": "",
+  "_latestTrackingId": 9,
+  "_buttons": {
+    "_submit": {
+      "buttonText": "Enviar",
+      "ariaLabel": "Enviar"
+    },
+    "_reset": {
+      "buttonText": "Reiniciar",
+      "ariaLabel": "Reiniciar"
+    },
+    "_showCorrectAnswer": {
+      "buttonText": "Ver respuesta correcta",
+      "ariaLabel": "Ver respuesta correcta"
+    },
+    "_hideCorrectAnswer": {
+      "buttonText": "Ocultar respuesta correcta",
+      "ariaLabel": "Ocultar respuesta correcta"
+    },
+    "_showFeedback": {
+      "buttonText": "Ver retroalimentación",
+      "ariaLabel": "Ver retroalimentación"
+    },
+    "remainingAttemptsText": "Intentos restantes",
+    "remainingAttemptText": "Último intento",
+    "disabledAriaLabel": "Este botón está deshabilitado por el momento"
+  },
+  "_classes": "",
+  "_requireCompletionOf": -1,
+  "_lockType": "",
+  "_id": "course",
+  "_start": {
+    "_isEnabled": true,
+    "_startIds": [],
+    "_force": false,
+    "_isMenuDisabled": false
+  },
+  "_globals": {
+    "_accessibility": {
+      "accessibilityToggleTextOn": "¿Habilitar accesibilidad?",
+      "accessibilityToggleTextOff": "¿Deshabilitar accesibilidad?",
+      "_accessibilityInstructions": {
+        "touch": "Instrucciones de uso. Deslizar el dedo hacia la izquierda para ver lo siguiente. Deslizar el dedo hacia la derecha para ver lo anterior. Utilizar doble toque de pantalla para seleccionar. Usar los dos dedos para desplazarse hacia arriba o abajo en la página.",
+        "notouch": "Instrucciones de uso. Usar la tecla tabulador para siguiente. Usar las teclas shift + tabulador para anterior. Usar la tecla enter para seleccionar. Usar la tecla escape para ir al inicio de la página.",
+        "ipad": "Instrucciones de uso para pantallas táctiles. Deslizar el dedo hacia la izquierda para ver lo siguiente. Deslizar el dedo hacia la derecha para ver lo anterior. Usar un doble toque de pantalla para seleccionar. Usar un deslizamiento de dos dedos hacia arriba para ir al principio de la página."
+      },
+      "skipNavigationText": "Saltar navegación",
+      "_ariaLabels": {
+        "answeredIncorrectly": "Respuesta incorrecta",
+        "answeredCorrectly": "Respuesta correcta",
+        "selectedAnswer": "Seleccionada",
+        "unselectedAnswer": "No seleccionada",
+        "navigation": "Barra de navegación",
+        "skipNavigation": "Saltar navegación",
+        "menuLoaded": "Menú cargado",
+        "page": "Página",
+        "pageLoaded": "Página cargada",
+        "previous": "Atrás",
+        "navigationDrawer": "Abrir recursos",
+        "close": "Cerrar",
+        "closeDrawer": "Cerrar navegación lateral",
+        "closeResources": "Cerrar recursos",
+        "drawer": "Barra de navegación lateral",
+        "closePopup": "Cerrar ventana emergente",
+        "next": "Siguiente",
+        "done": "Hecho",
+        "complete": "Completo",
+        "incomplete": "Incompleto",
+        "correct": "Correcto",
+        "incorrect": "Incorrecto",
+        "locked": "Bloqueado",
+        "accessibilityToggleButton": "Seleccionando este botón se puede establecer si la accesibilidad está activada o desactivada",
+        "feedbackPopUp": "Retroalimentación abierta",
+        "visited": "Visitado",
+        "menuIndicatorHeading": "Título del menú"
+      }
+    },
+    "_extensions": {
+      "_trickle": {
+        "incompleteContent": "Hay contenido incompleto arriba. Debe completarlo antes de continuar con el Recurso."
+      },
+      "_tutor": {
+        "hideFeedback": "Ocultar retroalimentación"
+      },
+      "_pageLevelProgress": {
+        "pageLevelProgress": "Secciones de página",
+        "pageLevelProgressIndicatorBar": "Progreso de la página. Use esto para detectar la lista de secciones en este tema y si están completas. Puede saltar directamente a cualquiera que esté incompleta o que suene particularmente interesante. {{percentageComplete}}%",
+        "pageLevelProgressMenuBar": "Finalización de la página {{percentageComplete}}%",
+        "pageLevelProgressEnd": "Ha llegado al final de la lista de secciones de la página.",
+        "optionalContent": "Contenido opcional",
+        "_navOrder": "0"
+      },
+      "_resources": {
+        "resources": "Recursos adicionales."
+      },
+      "_languagePicker": {
+        "navigationBarLabel": "Seleccione el idioma del Recurso",
+        "languageSelector": "Selector de idioma"
+      }
+    },
+    "_components": {
+      "_text": {
+        "ariaRegion": "Componente de texto"
+      },
+      "_narrative": {
+        "ariaRegion": "Presentación de diapositivas. Seleccione el botón siguiente para avanzar.",
+        "previous": "{{#if title}}Volver a {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.previous}}{{/if}}",
+        "next": "{{#if title}}Continuar a {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.next}}{{/if}}"
+      },
+      "_media": {
+        "ariaRegion": "Reproductor de media {{#any _transcript._inlineTranscript _transcript._externalTranscript}} y transcripción{{/any}}.",
+        "skipToTranscript": "Omitir la transcripción",
+        "playText": "Reproducir",
+        "pauseText": "Pausar",
+        "stopText": "Detener",
+        "audioPlayerText": "Texto - reproductor de audio",
+        "videoPlayerText": "Texto - Reproductor de video",
+        "tracksText": "Subtítulos",
+        "timeSliderText": "Línea de tiempo",
+        "muteText": "Texto - Silenciar",
+        "unmuteStatusText": "Texto - Desactivar el silencio",
+        "muteStatusText": "Silenciado",
+        "volumeSliderText": "Texto - Controlador de volumen",
+        "fullscreenText": "Texto - Pantalla completa",
+        "goFullscreenText": "Texto - Ver pantalla completa",
+        "turnOffFullscreenText": "Texto - Desactivar pantalla completa",
+        "noneText": "Ninguno",
+        "skipBackText": "Volver hacia atrás %1 segundos",
+        "allyVolumeControlText": "Usar las teclas de flecha arriba o abajo para aumentar o disminuir el volumen.",
+        "progessHelpText": "Use las teclas de flecha izquierda o derecha para avanzar o retroceder un segundo, flechas arriba/abajo para avanzar diez segundos."
+      },
+      "_accordion": {
+        "ariaRegion": "Lista de secciones ampliables. Seleccione cada botón para expandir el contenido."
+      },
+      "_graphic": {
+        "ariaRegion": "Sección gráfica de imágenes"
+      },
+      "_textinput": {
+        "ariaRegion": "Entrada de texto. Escriba su respuesta y luego envíela."
+      },
+      "_mcq": {
+        "ariaRegion": "Pregunta de selección múltiple",
+        "ariaCorrectAnswer": "La respuesta correcta es {{{correctAnswer}}}",
+        "ariaCorrectAnswers": "Las respuestas correctas son {{{correctAnswer}}}",
+        "ariaUserAnswer": "Respuesta elegida {{{userAnswer}}}",
+        "ariaUserAnswers": "Las respuestas que eligió fueron {{{userAnswer}}}"
+      },
+      "_gmcq": {
+        "ariaRegion": "Preguntas de opción múltiple",
+        "ariaCorrectAnswer": "La respuesta correcta es {{{correctAnswer}}}",
+        "ariaCorrectAnswers": "Las respuestas correctas son {{{correctAnswer}}}",
+        "ariaUserAnswer": "La respuesta que elegiste fue {{{userAnswer}}}",
+        "ariaUserAnswers": "Las respuestas que eligió fueron {{{userAnswer}}}"
+      },
+      "_assessmentResults": {
+        "ariaRegion": "Resultados de la evaluación."
+      },
+      "_slider": {
+        "ariaRegion": "Deslizador. Responda a la pregunta seleccionando un valor en la escala.",
+        "ariaCorrectAnswer": "La respuesta correcta es {{{correctAnswer}}}",
+        "ariaCorrectAnswerRange": "La respuesta correcta es cualquier valor de {{{bottom}}} a {{{top}}}",
+        "ariaUserAnswer": "La respuesta seleccionada fue {{{userAnswer}}}",
+        "labelStart": "Inicio de la escala",
+        "labelEnd": "Fin de la escala"
+      },
+      "_notify-imagegrid": {
+        "ariaRegion": "Este componente contiene imágenes que se muestran en forma de una galería de imágenes."
+      },
+      "_linkItems": {
+        "ariaRegion": "Botón de enlace"
+      },
+      "_matching": {
+        "ariaRegion": "Pareo. Seleccione de las listas y luego envíe.",
+        "ariaCorrectAnswer": "La respuesta correcta para {{{itemText}}} is {{{correctAnswer}}}",
+        "ariaUserAnswer": "La respuesta que eligió para {{{itemText}}} was {{{userAnswer}}}"
+      }
+    },
+    "_menu": {
+      "_boxMenu": {
+        "durationLabel": "Duración"
+      }
+    }
+  },
+  "_type": "course",
+  "_branching": {
+    "_isEnabled": true
+  },
+  "_pageLevelProgress": {
+    "_isEnabled": true,
+    "_showPageCompletion": true,
+    "_isCompletionIndicatorEnabled": false,
+    "_isShownInNavigationBar": true
+  },
+  "_resources": {
+    "_isEnabled": false,
+    "_drawerOrder": 0,
+    "title": "Recursos adicionales",
+    "description": "Aquí se pueden ver los recursos adicionales de este Recurso",
+    "_filterButtons": {
+      "all": "Todos",
+      "document": "Documentos",
+      "media": "Recursos multimedia",
+      "link": "Enlaces"
+    },
+    "_filterAria": {
+      "allAria": "Ver todos los recursos",
+      "documentAria": "Ver recursos de documentos",
+      "mediaAria": "Ver recursos multimedia",
+      "linkAria": "Ver enlaces"
+    },
+    "_resourcesItems": []
+  },
+  "_bookmarking": {
+    "_isEnabled": true,
+    "_level": "component",
+    "_showPrompt": true,
+    "title": "Marcadores",
+    "body": "¿Te gustaría continuar donde lo dejaste?",
+    "_buttons": {
+      "yes": "Si",
+      "no": "No"
+    }
+  },
+  "_visua11y": {
+    "_isEnabled": true,
+    "_shouldSavePreferences": false,
+    "title": "Controles de accesibilidad visual",
+    "body": "Utilice los controles que aparecen a continuación para personalizar su experiencia de aprendizaje según sus necesidades individuales.",
+    "_groups": {
+      "visualDisplay": "Mejorar la presentación visual",
+      "distractions": "Reducir distracciones",
+      "readability": "Facilidad de lectura"
+    },
+    "_preview": {
+      "title": "Título",
+      "character": "A"
+    },
+    "_colorProfiles": {
+      "default": "Por defecto",
+      "achromatopsia": "Escala de grises",
+      "protanopia": "Rojo/verde",
+      "deuteranopia": "Verde/rojo",
+      "tritanopia": "Azul/Amarillo",
+      "dyslexia": "Amarillo"
+    },
+    "_colorProfile": {
+      "_isEnabled": true,
+      "title": "Opciones de color",
+      "_default": "Por defecto"
+    },
+    "_highContrast": {
+      "_isEnabled": true,
+      "title": "Contraste alto",
+      "_default": false
+    },
+    "_highContrastLuminanceThreshold": {
+      "_isEnabled": true,
+      "title": "Iluminación en alto contraste",
+      "_default": "70"
+    },
+    "_noTransparency": {
+      "_isEnabled": true,
+      "title": "Sin transparencia",
+      "_default": false
+    },
+    "_lowBrightness": {
+      "_isEnabled": true,
+      "title": "Luminosidad baja",
+      "_default": false
+    },
+    "_invert": {
+      "_isEnabled": true,
+      "title": "Invertido",
+      "_default": false
+    },
+    "_noAnimations": {
+      "_isEnabled": true,
+      "title": "Sin animaciones",
+      "_default": false
+    },
+    "_noBackgroundImages": {
+      "_isEnabled": true,
+      "title": "Sin imágenes de fondo",
+      "_default": false
+    },
+    "_fontSize": {
+      "_isEnabled": true,
+      "title": "Font size",
+      "smallLabel": "Pequeña",
+      "_small": "9pt",
+      "mediumLabel": "Mediana",
+      "_medium": "",
+      "largeLabel": "Grande",
+      "_large": "18pt",
+      "_default": ""
+    },
+    "_lineHeight": {
+      "_isEnabled": true,
+      "title": "Alto de línea",
+      "smallLabel": "Pequeño",
+      "_small": "0.9",
+      "mediumLabel": "Mediano",
+      "_medium": "1",
+      "largeLabel": "Grande",
+      "_large": "1.2",
+      "_default": "1"
+    },
+    "_paragraphSpacing": {
+      "_isEnabled": true,
+      "title": "Espaciado entre párrafos",
+      "smallLabel": "Pequeño",
+      "_small": "0.5",
+      "mediumLabel": "Mediano",
+      "_medium": "1",
+      "largeLabel": "Grande",
+      "_large": "2",
+      "_default": "1"
+    },
+    "_letterSpacing": {
+      "_isEnabled": true,
+      "title": "Espaciado entre letras",
+      "smallLabel": "Pequeño",
+      "_small": "0.97",
+      "mediumLabel": "Mediano",
+      "_medium": "1",
+      "largeLabel": "Grande",
+      "_large": "1.2",
+      "_default": "1"
+    },
+    "_wordSpacing": {
+      "_isEnabled": true,
+      "title": "Espaciado entre palabras",
+      "smallLabel": "Pequeño",
+      "_small": "0.97",
+      "mediumLabel": "Mediano",
+      "_medium": "1",
+      "largeLabel": "Grande",
+      "_large": "1.2",
+      "_default": "1"
+    },
+    "_button": {
+      "navigationAriaLabel": "Configuración de la accesibilidad visual",
+      "resetText": "Restablecer",
+      "closeText": "Cerrar"
+    },
+    "resetAriaMessage": "Se han restablecido las opciones de accesibilidad visual"
+  },
+  "_spoor": {
+    "_messages": ""
+  },
+  "_assessment": {
+    "_isPercentageBased": true,
+    "_scoreToPass": 60,
+    "_correctToPass": 60
+  },
+  "_boxMenu": {
+    "_backgroundImage": {
+      "_large": "",
+      "_medium": "",
+      "_small": ""
+    },
+    "_backgroundStyles": {
+      "_backgroundRepeat": null,
+      "_backgroundSize": null,
+      "_backgroundPosition": "right bottom"
+    },
+    "_menuHeader": {
+      "_backgroundImage": {
+        "_large": "",
+        "_medium": "",
+        "_small": ""
+      },
+      "_backgroundStyles": {
+        "_backgroundRepeat": null,
+        "_backgroundSize": null,
+        "_backgroundPosition": null
+      },
+      "_minimumHeights": {
+        "_large": null,
+        "_medium": null,
+        "_small": null
+      }
+    }
+  }
+}

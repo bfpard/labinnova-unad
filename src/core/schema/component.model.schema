@@ -1,0 +1,195 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "$ref": "http://localhost/system/trackedObject.schema",
+  "properties": {
+    "_componentType": {
+      "type": "objectid",
+      "required": true,
+      "ref": "componenttype",
+      "editorOnly": true
+    },
+    "_type": {
+      "type": "string",
+      "id": "http://jsonschema.net/_type"
+    },
+    "_component": {
+      "type": "string",
+      "required": true,
+      "default": "",
+      "title": "Componente"
+    },
+    "_layout": {
+      "type": "string"
+    },
+    "_classes": {
+      "type": "string",
+      "default": "",
+      "isSetting": true,
+      "inputType": "Text",
+      "validators": [],
+      "title": "Incluir clases",
+      "help": "Las clases CSS usadas para agregar comportamientos o estilos a los elementos del componente."
+    },
+    "_isOptional": {
+      "type": "boolean",
+      "default": false,
+      "isSetting": true,
+      "inputType": "Checkbox",
+      "validators": [],
+      "title": "¿Componente opcional?",
+      "help": "Define si es obligario o no completar el componente."
+    },
+    "_isAvailable": {
+      "type": "boolean",
+      "default": true,
+      "isSetting": true,
+      "inputType": "Checkbox",
+      "validators": [],
+      "title": "¿Componente disponible?",
+      "help": "Define si un componente y su contenido esta disponible o no en el recurso."
+    },
+    "_isHidden": {
+      "type": "boolean",
+      "default": false,
+      "isSetting": true,
+      "inputType": "Checkbox",
+      "validators": [],
+      "title": "¿Ocultar componente?",
+      "help": "Establece si se muestra visualmente el componente, es equivalente a aplicar el CSS 'display:none'."
+    },
+    "_isVisible": {
+      "type": "boolean",
+      "default": true,
+      "isSetting": true,
+      "inputType": "Checkbox",
+      "validators": [],
+      "title": "¿Es un componente visible?",
+      "help": "Oculta el contenido del componente pero aún ocupa su espacio en el recurso, es equivalente a aplicar el CSS 'visibility:hidden'."
+    },
+    "_isResetOnRevisit": {
+      "type": "string",
+      "default": "false",
+      "isSetting": true,
+      "inputType": {
+        "type": "Select",
+        "options": [
+          {"val": "false", "label": "No"},
+          {"val": "soft", "label": "Suave"},
+          {"val": "hard", "label": "Fuerte"}
+        ]
+      },
+      "title": "¿Restablecer el componente cuando se vuelve a visitar?",
+      "help": "Controla si este componente se restablecerá cuando el estudiante abandone la página y vuelva a ella. La configuración 'suave' restablecerá el componente para permitir que el estudiante lo intente nuevamente, pero no requerirá que lo haga; mientras que la configuración 'fuerte' requerirá que lo hagan. El valor predeterminado (no) hará que el componente se reinicie.",
+      "validators": []
+    },
+    "_ariaLevel": {
+      "type": "number",
+      "default": 0,
+      "title": "Nivel ARIA",
+      "isSetting": true,
+      "inputType": "Number",
+      "validators": ["number"],
+      "help": "Si necesita anular el nivel de ARIA del componente predeterminado (como se define en los Ajustes de configuración), configúrelo en cualquier número mayor que 0."
+    },
+    "_disableAccessibilityState": {
+      "type": "boolean",
+      "default": false,
+      "isSetting": true,
+      "inputType": "Checkbox",
+      "validators": [],
+      "title": "¿El estado de accesibilidad está deshabilitado?",
+      "help": "Controla si el usuario puede tabular a una etiqueta oculta que describe el estado de finalización del componente"
+    },
+    "_parentId": {
+      "type": "objectid",
+      "required": true
+    },
+    "_courseId": {
+      "type": "objectid",
+      "required": true,
+      "editorOnly": true
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": "Nombre del componente",
+      "title": "Título",
+      "inputType": "Text",
+      "validators": ["required"],
+      "help": "Texto que se usa como el identificador del componente",
+      "translatable": true
+    },
+    "displayTitle": {
+      "type": "string",
+      "required": false,
+      "default": "Título del componente",
+      "title": "Mostrar título",
+      "inputType": "DisplayTitle",
+      "validators": [],
+      "help": "Cuando se muestre el componente, este será su título",
+      "translatable": true
+    },
+    "body":{
+      "type": "string",
+      "default" : "",
+      "title": "Contenido",
+      "inputType": "TextArea",
+      "validators": [],
+      "help": "Corresponde al contenido del componente. Para ver las sugerencias ortográficas, mantenga presionada la tecla Ctrl (Win) o CMD (OS) + clic derecho sobre la región a corregir.",
+      "translatable": true
+    },
+    "_onScreen": {
+      "type": "object",
+      "title": "Clases en pantalla",
+      "help": "Estas configuraciones le permiten adjuntar clases al componente cuando está dentro de la ventana gráfica del navegador; útil para ejecutar animaciones basadas en CSS en componentes a medida que se desplazan en la vista.",
+      "properties": {
+        "_isEnabled": {
+          "type": "boolean",
+          "default": false,
+          "isSetting": true,
+          "inputType": "Checkbox",
+          "validators": [],
+          "title": "¿Activar?"
+        },
+        "_classes": {
+          "type": "string",
+          "default": "",
+          "isSetting": true,
+          "required": false,
+          "inputType": "Text",
+          "validators": [],
+          "title": "Incluir clases",
+          "help": "Las clases CSS usadas para agregar comportamientos o estilos a los elementos del componente."
+        },
+        "_percentInviewVertical": {
+          "type": "number",
+          "required": false,
+          "default": 50,
+          "isSetting": true,
+          "title": "Porcentaje visual de la(s) clase(s)",
+          "inputType": "Number",
+          "validators": ["number"],
+          "help": "Controla qué porcentaje de la altura del componente debe estar en la ventana gráfica para que se agreguen las clases CSS."
+        }
+      }
+    },
+    "_extensions": {
+      "type": "object"
+    },
+    "themeSettings": {
+      "type": "object",
+      "title": "Configuraciones del tema"
+    },
+    "properties" : {
+      "type": "object",
+      "title": "Propiedades"
+    },
+    "_colorLabel": {
+      "type": "string",
+      "required": false,
+      "editorOnly": true
+    }
+  }
+}

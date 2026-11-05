@@ -1,0 +1,17 @@
+{
+  "name": "adapt-contrib-vanilla",
+  "version": "10.2.0",
+  "framework": ">=5.20.1",
+  "homepage": "https://github.com/wtechsas/adapt-contrib-vanilla",
+  "bugs": "https://github.com/wtechsas/adapt-contrib-vanilla/issues",
+  "theme": "vanilla",
+  "displayName": "Tema inicial",
+  "description": "Estilos y colores que tendrán los cursos que se van a crear desde la plataforma",
+  "main": "js/theme.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-theme"
+  ],
+  "license": "GPL-3.0",
+  "targetAttribute": "_vanilla"
+}

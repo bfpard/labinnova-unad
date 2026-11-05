@@ -1,0 +1,20 @@
+{
+    "name": "adapt-linkItems",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/wtechsas/adapt-linkItems.git"
+    },
+    "framework": ">=5.14.0",
+    "version": "10.1.0",
+    "homepage": "https://github.com/wtechsas/adapt-linkItems",
+    "issues": "https://github.com/wtechsas/adapt-linkItems/issues",
+    "component": "linkItems",
+    "description": "Un componente que proporciona un botón de enlace hacia un recurso web",
+    "main": "/js/adapt-linkItems.js",
+    "displayName": "Botón de enlace",
+    "keywords": [
+        "adapt-plugin",
+        "adapt-component"
+    ],
+    "license": "GPLv3"
+}

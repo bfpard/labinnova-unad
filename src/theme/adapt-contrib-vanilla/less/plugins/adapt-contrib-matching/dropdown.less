@@ -1,0 +1,78 @@
+.dropdown {
+  &__btn {
+    position: relative;
+    padding: @item-padding (@icon-size + (@item-padding * 2)) @item-padding @item-padding;
+    line-height: @body-line-height;
+    text-align: left;
+    background-color: #FFF;
+    color: #005883;
+    box-shadow: 0 0 5px #005883b5;
+    border-radius: 50px;
+    font-weight: bold;
+
+    .no-touch &:not(.is-disabled):not([aria-expanded="true"]):hover,
+    html:not(.a11y-disable-focusoutline) &:focus {
+      background-color: #e8f0f4;
+      color: #005883;
+      .transition(background-color @duration ease-in, color @duration ease-in;);
+    }
+
+    .dir-rtl & {
+      padding-right: @item-padding;
+      padding-left: @icon-size + (@item-padding * 2);
+      text-align: right;
+    }
+  }
+
+  &__btn.is-disabled {
+    background-color: #f6f6f6;
+    color: #005883;
+  }
+
+  &__btn[aria-expanded="true"] {
+    background-color: #e8f0f4;
+    color: #005883;
+    font-weight: bold;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    right: @item-padding;
+    .transform(translateY(-50%));
+
+    .dir-rtl & {
+      right: inherit;
+      left: @item-padding;
+    }
+  }
+}
+
+.dropdown-item {
+  padding: @item-padding;
+  background-color: #FFF;
+  color: #005883;
+  box-shadow: 0 0 5px #005883b5;
+  border-radius: 50px;
+  margin: 0.3rem auto;
+  width: 98%;
+
+  .no-touch &:not(:focus):not([aria-selected="true"]):hover {
+    background-color: #e8f0f4;
+    color: #005883;
+    .transition(background-color @duration ease-in, color @duration ease-in;);
+  }
+
+  &:focus,
+  &[aria-selected="true"] {
+    // This code can be used to style a non-native dropdown as closely
+    // as possible to the default browser settings
+    // background-color: Highlight;
+    // background-color: -webkit-focus-ring-color;
+    // color: white;
+
+    background-color: #e8f0f4;
+    color: #005883;
+    font-weight: bold;
+  }
+}

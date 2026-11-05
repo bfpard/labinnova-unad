@@ -1,0 +1,673 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "required": false,
+  "globals": {
+    "incompleteContent": {
+      "type": "string",
+      "required": true,
+      "title": "Contenido incompleto",
+      "default": "Hay contenido incompleto arriba. Debe completarlo antes de continuar con el Recurso.",
+      "inputType": "Text",
+      "validators": [],
+      "translatable": true
+    }
+  },
+  "properties": {
+    "pluginLocations": {
+      "type": "object",
+      "required": true,
+      "properties": {
+        "config": {
+          "type": "object",
+          "properties": {
+            "_trickle": {
+              "type": "object",
+              "required": false,
+              "legend": "Efecto en cascada",
+              "properties": {
+                "_completionAttribute": {
+                  "type": "string",
+                  "required": false,
+                  "enum": [
+                    "_isInteractionComplete",
+                    "_isComplete"
+                  ],
+                  "default": "_isComplete",
+                  "title": "Atributo de finalización",
+                  "inputType": {
+                    "type": "Select",
+                    "options": [
+                      {
+                        "val": "_isInteractionComplete",
+                        "label": "Interacción completa"
+                      },
+                      {
+                        "val": "_isComplete",
+                        "label": "Completo"
+                      }
+                    ]
+                  },
+                  "validators": [],
+                  "help": "Establecer qué atributo se utiliza para determinar la finalización"
+                }
+              }
+            }
+          }
+        },
+        "course": {
+          "type": "object"
+        },
+        "contentobject": {
+          "type": "object"
+        },
+        "article": {
+          "type": "object",
+          "properties": {
+            "_trickle": {
+              "type": "object",
+              "required": false,
+              "legend": "Efecto en cascada",
+              "properties": {
+                "_isEnabled": {
+                  "type": "boolean",
+                  "required": false,
+                  "default": true,
+                  "title": "Habilitar efecto en cascada",
+                  "inputType": "Checkbox",
+                  "validators": [],
+                  "help": "Permite recorrer un recurso por secciones más pequeñas"
+                },
+                "_autoScroll": {
+                  "type": "boolean",
+                  "required": false,
+                  "default": true,
+                  "title": "Desplazarse automáticamente",
+                  "inputType": "Checkbox",
+                  "validators": [],
+                  "help": "Cuando se quiere ir a otra sección, la vista se mueve automáticamente hacia el siguiente bloque"
+                },
+                "_scrollDuration": {
+                  "type": "number",
+                  "required": true,
+                  "default": 500,
+                  "title": "Duración del desplazamiento",
+                  "inputType": "Number",
+                  "validators": [
+                    "required",
+                    "number"
+                  ],
+                  "help": "Duración de la animación de desplazamiento en milisegundos"
+                },
+                "_onChildren": {
+                  "type": "boolean",
+                  "required": false,
+                  "default": true,
+                  "title": "Habilitar en bloques secundarios",
+                  "inputType": "Checkbox",
+                  "validators": [],
+                  "help": "Establecer en falso en el artículo para usar efecto en cascada a nivel de artículo"
+                },
+                "_scrollTo": {
+                  "type": "string",
+                  "required": false,
+                  "default": "@block +1",
+                  "title": "Desplazarse a",
+                  "inputType": "Text",
+                  "validators": [],
+                  "help": "Establecer cómo se desplaza el efecto en cascada"
+                },
+                "_completionAttribute": {
+                  "type": "string",
+                  "required": false,
+                  "enum": [
+                    "_isInteractionComplete",
+                    "_isComplete"
+                  ],
+                  "default": "_isComplete",
+                  "title": "Atributo de finalización",
+                  "inputType": {
+                    "type": "Select",
+                    "options": [
+                      {
+                        "val": "_isInteractionComplete",
+                        "label": "Interacción completa"
+                      },
+                      {
+                        "val": "_isComplete",
+                        "label": "Completo"
+                      }
+                    ]
+                  },
+                  "validators": [],
+                  "help": "Establecer qué atributo se utiliza para determinar la finalización"
+                },
+                "_button": {
+                  "type": "object",
+                  "required": false,
+                  "title": "Atributos de botón",
+                  "properties": {
+                    "_isEnabled": {
+                      "type": "boolean",
+                      "required": false,
+                      "title": "Activado",
+                      "default": true,
+                      "inputType": "Checkbox",
+                      "validators": [],
+                      "help": "Hace refencia a las opciones disponibles para controlar el comportamiento del botón (continuar o empezar) segun sea el caso. Incluyendo su aspecto."
+                    },
+                    "_styleBeforeCompletion": {
+                      "type": "string",
+                      "required": false,
+                      "enum": [
+                        "hidden",
+                        "visible",
+                        "disabled"
+                      ],
+                      "default": "hidden",
+                      "title": "Visibilidad inicial",
+                      "inputType": {
+                        "type": "Select",
+                        "options": [
+                          {
+                            "val": "hidden",
+                            "label": "Oculto"
+                          },
+                          {
+                            "val": "visible",
+                            "label": "Visible"
+                          },
+                          {
+                            "val": "disabled",
+                            "label": "Deshabilitado"
+                          }
+                        ]
+                      },
+                      "validators": [
+                        "required"
+                      ],
+                      "help": "Establecer la visibilidad del botón antes de completar"
+                    },
+                    "_styleAfterClick": {
+                      "type": "string",
+                      "required": false,
+                      "enum": [
+                        "hidden",
+                        "visible",
+                        "disabled"
+                      ],
+                      "default": "hidden",
+                      "title": "Visibilidad final",
+                      "inputType": {
+                        "type": "Select",
+                        "options": [
+                          {
+                            "val": "hidden",
+                            "label": "Oculto"
+                          },
+                          {
+                            "val": "visible",
+                            "label": "Visible"
+                          },
+                          {
+                            "val": "disabled",
+                            "label": "Deshabilitado"
+                          }
+                        ]
+                      },
+                      "validators": [
+                        "required"
+                      ],
+                      "help": "Establecer la visibilidad del botón después de completar"
+                    },
+                    "_isFullWidth": {
+                      "type": "boolean",
+                      "required": false,
+                      "default": true,
+                      "title": "Ancho completo",
+                      "inputType": "Checkbox",
+                      "validators": [],
+                      "help": "Si esta activado, el botón de (empezar o continuar) ocupa todo el ancho de la pantalla"
+                    },
+                    "_autoHide": {
+                      "type": "boolean",
+                      "required": false,
+                      "default": false,
+                      "title": "Ocultar en desplazamiento",
+                      "inputType": "Checkbox",
+                      "validators": [],
+                      "help": "Oculta el botón cuando se desplaza de la vista; no se recomienda su uso en cursos que deben ser compatibles con lectores de pantalla."
+                    },
+                    "_showEndOfPage": {
+                      "type": "boolean",
+                      "required": false,
+                      "default": true,
+                      "title": "Mostrar botón de fin de página",
+                      "inputType": "Checkbox",
+                      "validators": [],
+                      "help": "Cuando se establece en `falso`, oculta cualquier botón de final de página."
+                    },
+                    "_className": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "title": "Clases personalizadas",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "_hasIcon": {
+                      "type": "boolean",
+                      "required": false,
+                      "default": false,
+                      "title": "Habilitar icono de botón",
+                      "inputType": "Checkbox",
+                      "validators": [],
+                      "help": "Muestra un icono junto al texto del botón efecto en cascada o en su lugar. El ícono predeterminado es una pequeña flecha hacia abajo"
+                    },
+                    "text": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Continuar",
+                      "title": "Botón de texto",
+                      "inputType": "Text",
+                      "validators": [],
+                      "translatable": true,
+                      "help": "Establece el texto del botón para ir a la siguiente sección"
+                    },
+                    "ariaLabel": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Continuar",
+                      "title": "Botón Aria Etiqueta",
+                      "inputType": "Text",
+                      "validators": [],
+                      "translatable": true,
+                      "help": "Es el texto que lee el lector de pantalla cuando este se posiciona encima del botón ir a la siguiente sección."
+                    },
+                    "startText": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Continuar",
+                      "title": "Texto del primer botón",
+                      "inputType": "Text",
+                      "validators": [],
+                      "help": "Texto del botón al inicio de todas las secciones",
+                      "translatable": true
+                    },
+                    "startAriaLabel": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Continuar",
+                      "title": "Etiqueta Aria del primer botón",
+                      "inputType": "Text",
+                      "validators": [],
+                      "help": "Es el texto que lee el lector de pantalla cuando este se posiciona encima del primer botón de todas las secciones",
+                      "translatable": true
+                    },
+                    "finalText": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Finalizar",
+                      "title": "Texto del botón final",
+                      "inputType": "Text",
+                      "validators": [],
+                      "help": "Texto del botón al final de todas las secciones",
+                      "translatable": true
+                    },
+                    "finalAriaLabel": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Finalizar",
+                      "title": "Etiqueta de Aria del botón final",
+                      "inputType": "Text",
+                      "validators": [],
+                      "help": "Es el texto que lee el lector de pantalla cuando este se posiciona encima del último botón de todas las secciones",
+                      "translatable": true
+                    },
+                    "_component": {
+                      "type": "string",
+                      "required": false,
+                      "default": "botón de efecto en cascada",
+                      "title": "Complemento de efecto en cascada",
+                      "inputType": "Text",
+                      "validators": []
+                    }
+                  }
+                },
+                "_stepLocking": {
+                  "type": "object",
+                  "required": false,
+                  "title": "Atributos de bloqueo de pasos",
+                  "properties": {
+                    "_isEnabled": {
+                      "type": "boolean",
+                      "required": false,
+                      "default": true,
+                      "title": "Activado",
+                      "inputType": "Checkbox",
+                      "validators": []
+                    },
+                    "_isCompletionRequired": {
+                      "type": "boolean",
+                      "required": false,
+                      "default": true,
+                      "title": "Finalización requerida",
+                      "inputType": "Checkbox",
+                      "validators": []
+                    },
+                    "_isLockedOnRevisit": {
+                      "type": "boolean",
+                      "required": false,
+                      "default": false,
+                      "title": "Bloqueado en la revisión",
+                      "inputType": "Checkbox",
+                      "validators": []
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "block": {
+          "type": "object",
+          "properties": {
+            "_trickle": {
+              "type": "object",
+              "required": false,
+              "legend": "Efecto en cascada",
+              "properties": {
+                "_isEnabled": {
+                  "type": "boolean",
+                  "required": false,
+                  "default": true,
+                  "title": "Habilitar efecto en cascada",
+                  "inputType": "Checkbox",
+                  "validators": []
+                },
+                "_isInherited": {
+                  "type": "boolean",
+                  "required": false,
+                  "default": true,
+                  "title": "Heredar configuración del artículo principal",
+                  "inputType": "Checkbox"
+                },
+                "_autoScroll": {
+                  "type": "boolean",
+                  "required": false,
+                  "default": true,
+                  "title": "Desplazarse automáticamente",
+                  "inputType": "Checkbox",
+                  "validators": []
+                },
+                "_scrollDuration": {
+                  "type": "number",
+                  "required": true,
+                  "default": 500,
+                  "title": "Duración del desplazamiento",
+                  "inputType": "Number",
+                  "validators": [
+                    "required",
+                    "number"
+                  ],
+                  "help": "Duración de la animación de desplazamiento en milisegundos"
+                },
+                "_scrollTo": {
+                  "type": "string",
+                  "required": false,
+                  "default": "@bloque +1",
+                  "title": "Desplazarse a",
+                  "inputType": "Text",
+                  "validators": [],
+                  "help": "Establecer cómo se desplaza el efecto en cascada"
+                },
+                "_completionAttribute": {
+                  "type": "string",
+                  "required": false,
+                  "enum": [
+                    "_isInteractionComplete",
+                    "_isComplete"
+                  ],
+                  "default": "_isComplete",
+                  "title": "Atributo de finalización",
+                  "inputType": {
+                    "type": "Select",
+                    "options": [
+                      {
+                        "val": "_isInteractionComplete",
+                        "label": "Interacción completa"
+                      },
+                      {
+                        "val": "_isComplete",
+                        "label": "Completo"
+                      }
+                    ]
+                  },
+                  "validators": [],
+                  "help": "Establecer qué atributo se utiliza para determinar la finalización"
+                },
+                "_button": {
+                  "type": "object",
+                  "required": false,
+                  "title": "Atributos de botón",
+                  "properties": {
+                    "_isEnabled": {
+                      "type": "boolean",
+                      "required": false,
+                      "default": true,
+                      "title": "Activado",
+                      "inputType": "Checkbox",
+                      "validators": []
+                    },
+                    "_styleBeforeCompletion": {
+                      "type": "string",
+                      "required": false,
+                      "enum": [
+                        "hidden",
+                        "visible",
+                        "disabled"
+                      ],
+                      "default": "hidden",
+                      "title": "Visibilidad inicial",
+                      "inputType": {
+                        "type": "Select",
+                        "options": [
+                          {
+                            "val": "hidden",
+                            "label": "Oculto"
+                          },
+                          {
+                            "val": "visible",
+                            "label": "Visible"
+                          },
+                          {
+                            "val": "disabled",
+                            "label": "Deshabilitado"
+                          }
+                        ]
+                      },
+                      "help": "Establecer la visibilidad del botón antes de completar"
+                    },
+                    "_styleAfterClick": {
+                      "type": "string",
+                      "required": false,
+                      "enum": [
+                        "hidden",
+                        "visible",
+                        "disabled"
+                      ],
+                      "default": "hidden",
+                      "title": "Visibilidad definitiva",
+                      "inputType": {
+                        "type": "Select",
+                        "options": [
+                          {
+                            "val": "hidden",
+                            "label": "Oculto"
+                          },
+                          {
+                            "val": "visible",
+                            "label": "Visible"
+                          },
+                          {
+                            "val": "disabled",
+                            "label": "Deshabilitado"
+                          }
+                        ]
+                      },
+                      "help": "Establecer la visibilidad del botón después de completar"
+                    },
+                    "_isFullWidth": {
+                      "type": "boolean",
+                      "required": false,
+                      "default": true,
+                      "title": "Ancho completo",
+                      "inputType": "Checkbox",
+                      "validators": []
+                    },
+                    "_autoHide": {
+                      "type": "boolean",
+                      "required": false,
+                      "default": false,
+                      "title": "Ocultar en desplazamiento",
+                      "inputType": "Checkbox",
+                      "validators": [],
+                      "help": "Oculta el botón cuando se desplaza de la vista; no se recomienda su uso en cursos que deben ser compatibles con lectores de pantalla."
+                    },
+                    "_showEndOfPage": {
+                      "type": "boolean",
+                      "required": false,
+                      "default": true,
+                      "title": "Mostrar botón de fin de página",
+                      "inputType": "Checkbox",
+                      "validators": [],
+                      "help": "Cuando se establece en `falso`, oculta este botón solo si aparece al final de una página."
+                    },
+                    "_className": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "title": "Clases personalizadas",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "_hasIcon": {
+                      "type": "boolean",
+                      "required": false,
+                      "default": false,
+                      "title": "Habilitar icono de botón",
+                      "inputType": "Checkbox",
+                      "validators": [],
+                      "help": "Muestra un icono junto al texto del botón efecto en cascada o en su lugar. El ícono predeterminado es una pequeña flecha hacia abajo"
+                    },
+                    "text": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Continuar",
+                      "title": "Botón de texto",
+                      "inputType": "Text",
+                      "validators": [],
+                      "translatable": true
+                    },
+                    "ariaLabel": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Continuar",
+                      "title": "Botón Aria Etiqueta",
+                      "inputType": "Text",
+                      "validators": [],
+                      "translatable": true
+                    },
+                    "startText": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Continuar",
+                      "title": "Texto del primer botón",
+                      "inputType": "Text",
+                      "validators": [],
+                      "help": "Solo en artículos cuando 'Habilitar en bloqueos secundarios' se establece en verdadero",
+                      "translatable": true
+                    },
+                    "startAriaLabel": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Continuar",
+                      "title": "Etiqueta Aria del primer botón",
+                      "inputType": "Text",
+                      "validators": [],
+                      "help": "Solo en artículos cuando 'Habilitar en bloqueos secundarios' se establece en verdadero",
+                      "translatable": true
+                    },
+                    "finalText": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Finalizar",
+                      "title": "Texto final del botón",
+                      "inputType": "Text",
+                      "validators": [],
+                      "help": "Solo en artículos cuando 'Habilitar en bloqueos secundarios' se establece en verdadero",
+                      "translatable": true
+                    },
+                    "finalAriaLabel": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Finalizar",
+                      "title": "Etiqueta de Aria del botón final",
+                      "inputType": "Text",
+                      "validators": [],
+                      "help": "Solo en artículos cuando 'Habilitar en bloqueos secundarios' se establece en verdadero",
+                      "translatable": true
+                    },
+                    "_component": {
+                      "type": "string",
+                      "required": false,
+                      "default": "trickle-button",
+                      "title": "Efecto en cascada plugin",
+                      "inputType": "Text",
+                      "validators": []
+                    }
+                  }
+                },
+                "_stepLocking": {
+                  "type": "object",
+                  "required": false,
+                  "title": "Atributos de bloqueo de pasos",
+                  "properties": {
+                    "_isEnabled": {
+                      "type": "boolean",
+                      "required": false,
+                      "default": true,
+                      "title": "Activado",
+                      "inputType": "Checkbox",
+                      "validators": []
+                    },
+                    "_isCompletionRequired": {
+                      "type": "boolean",
+                      "required": false,
+                      "default": true,
+                      "title": "Finalización requerida",
+                      "inputType": "Checkbox",
+                      "validators": []
+                    },
+                    "_isLockedOnRevisit": {
+                      "type": "boolean",
+                      "required": false,
+                      "default": false,
+                      "title": "Bloqueado en la revisión",
+                      "inputType": "Checkbox",
+                      "validators": []
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "component": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}

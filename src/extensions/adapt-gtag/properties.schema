@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "id": "http://jsonschema.net",
+  "properties": {
+    "pluginLocations": {
+      "type": "object",
+      "properties": {
+        "config": {
+          "type": "object",
+           "title": "Configuración",
+          "properties": {
+            "_gtag": {
+              "type": "object",
+              "legend": "Analítica de datos de Google 4",
+              "properties": {
+                "_isEnabled": {
+                  "type": "boolean",
+                  "default": false,
+                  "title": "¿Activar?",
+                  "inputType": "Checkbox",
+                  "help": "Habilitar el seguimiento de la analítica de datos de Google"
+                },
+                "_measurementId": {
+                  "type": "string",
+                  "required": true,
+                  "title": "ID de medición",
+                  "inputType": "Text",
+                  "validators": [],
+                  "help": "Ingrese el ID de medición de la propiedad de la analítica de datos de Google para rastrear"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

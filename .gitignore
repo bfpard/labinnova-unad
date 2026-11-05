@@ -1,0 +1,12 @@
+# Dependencias
+node_modules/
+
+# Salida de compilación (se genera en CI)
+build/
+
+# Logs y temporales
+npm-debug.log*
+*.log
+.cache/
+.DS_Store
+Thumbs.db

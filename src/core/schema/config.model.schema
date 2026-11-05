@@ -1,0 +1,456 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "properties": {
+    "_extensions": {
+      "type": "object"
+    },
+    "_enabledExtensions": {
+      "type":"object"
+    },
+    "_theme": {
+      "type": "string",
+      "default": "adapt-contrib-vanilla"
+    },
+    "_menu": {
+      "type": "string",
+      "default": "adapt-contrib-boxMenu"
+    },
+    "_courseId": {
+      "type": "objectid",
+      "required": true
+    },
+    "_completionCriteria": {
+      "type": "object",
+      "title": "Criterios de finalización",
+      "properties": {
+        "_requireContentCompleted": {
+          "type": "boolean",
+          "default": true,
+          "inputType": "Checkbox",
+          "validators": [],
+          "title": "¿Requerir finalización de contenido?",
+          "help": "Especifica que se debe completar todo el contenido del recurso."
+        },
+        "_requireAssessmentCompleted": {
+          "type": "boolean",
+          "default": false,
+          "inputType": "Checkbox",
+          "validators": [],
+          "title": "¿Requerir finalización de la evaluación?",
+          "help": "Especifica que se deben completar todas las evaluaciones del recurso."
+        }
+      }
+    },
+    "_defaultLanguage": {
+      "type": "string",
+      "required": true,
+      "default": "es",
+      "title": "Idioma predeterminado",
+      "inputType": "Text",
+      "validators": ["required"],
+      "help": "Corresponde al idioma predeterminado del recurso"
+    },
+    "_defaultDirection": {
+      "type": "string",
+      "required": true,
+      "default": "ltr",
+      "title": "Dirección del texto",
+      "validators": ["required"],
+      "help": "Indica la orientación que tendra el texto",
+      "inputType": {
+        "type": "Select",
+        "options": [
+          {"val":"ltr", "label":"De izquierda a derecha"},
+          {"val":"rtl", "label":"De derecha a izquierda"}
+        ]
+      }
+    },
+    "_accessibility": {
+      "type": "object",
+      "title": "Accesibilidad",
+      "properties" : {
+        "_isEnabled": {
+          "type": "boolean",
+          "default": true,
+          "inputType": "Checkbox",
+          "validators": [],
+          "title": "¿Habilitar funciones de accesibilidad?",
+          "help": "Habilita las funciones de accesibilidad en el recurso"
+        },
+        "_isSkipNavigationEnabled": {
+          "type": "boolean",
+          "default": true,
+          "inputType": "Checkbox",
+          "validators": [],
+          "title": "¿Habilitar el vínculo Omitir navegación?",
+          "help": "Agrega un enlace al inicio de la página para permitir a los usuarios de asistencia tecnológica salten la navegación y vayan directamente al contenido de la página."
+        },
+        "_ariaLevels": {
+          "type": "object",
+          "title": "Niveles ARIA",
+          "help": "Si necesita anular el nivel de ARIA del componente predeterminado (como se define en los Ajustes de configuración), configúrelo en cualquier número mayor que 0.",
+          "properties" : {
+            "_menu": {
+              "type": "number",
+              "required": true,
+              "default": 1,
+              "title": "Nivel de ARIA para el elemento de menú",
+              "inputType": "Number",
+              "validators": ["required", "number"],
+              "help": "Indica el nivel de ARIA para elemento de menú"
+            },
+            "_menuGroup": {
+              "type": "number",
+              "required": true,
+              "default": 2,
+              "title": "Nivel de ARIA para el elemento de menú de grupo",
+              "inputType": "Number",
+              "validators": ["required", "number"],
+              "help": "Indica el nivel de ARIA para el elemento de menú de grupo"
+            },
+            "_menuItem": {
+              "type": "number",
+              "required": true,
+              "default": 2,
+              "title": "Nivel de ARIA para el elemento item de menú",
+              "inputType": "Number",
+              "validators": ["required", "number"],
+              "help": "El nivel ARIA del elemento item de menú deberá cambiarse a 3 si se utilizan menús de grupos y se requiere compatibilidad con A11Y."
+            },
+            "_page": {
+              "type": "number",
+              "required": true,
+              "default": 1,
+              "title": "Nivel de ARIA para el elemento de página",
+              "inputType": "Number",
+              "validators": ["required", "number"],
+              "help": "Indica el nivel de ARIA para el elemento de página"
+            },
+            "_article": {
+              "type": "number",
+              "required": true,
+              "default": 2,
+              "title": "Nivel de ARIA para el elemento de artículo",
+              "inputType": "Number",
+              "validators": ["required", "number"],
+              "help": "Indica el nivel de ARIA para el elemento de artículo"
+            },
+            "_block": {
+              "type": "number",
+              "required": true,
+              "default": 3,
+              "title": "Nivel de ARIA para el elemento de bloque",
+              "inputType": "Number",
+              "validators": ["required", "number"],
+              "help": "Indica el nivel de ARIA para el elemento de bloque"
+            },
+            "_component": {
+              "type": "number",
+              "required": true,
+              "default": 4,
+              "title": "Nivel de ARIA para el elemento de componente",
+              "inputType": "Number",
+              "validators": ["required", "number"],
+              "help": "Indica el nivel de ARIA para el elemento de componente"
+            },
+            "_componentItem": {
+              "type": "number",
+              "required": true,
+              "default": 5,
+              "title": "Nivel de ARIA para el elemento item de componente",
+              "inputType": "Number",
+              "validators": ["required", "number"],
+              "help": "Indica el nivel de ARIA para el elemento ítem de componente"
+            },
+            "_notify": {
+              "type": "number",
+              "required": true,
+              "default": 1,
+              "title": "Nivel de ARIA para el elemento notificación emergente",
+              "inputType": "Number",
+              "validators": ["required", "number"],
+              "help": "Indica el nivel de ARIA para el elemento de notificación emergente"
+            }
+          }
+        },
+        "_options": {
+          "type": "object",
+          "default": {},
+          "title": "Opciones ampliadas de accesibilidad",
+          "inputType": {
+            "type": "CodeEditor",
+            "mode": "json"
+          },
+          "validators": [],
+          "help": "Objeto JSON opcional que se puede utilizar para personalizar el comportamiento de accesibilidad"
+        }
+      }
+    },
+    "_fixes": {
+      "type": "object",
+      "default": {
+        "_imgLazyLoad": true
+      },
+      "title": "Corrige opciones extendidas",
+      "inputType": {
+        "type": "CodeEditor",
+        "mode": "json"
+      },
+      "validators": [],
+      "help": "Objeto JSON opcional que se puede utilizar para personalizar correcciones de la aplicación"
+    },
+    "screenSize": {
+      "type": "object",
+      "title": "Tamaño de pantalla",
+      "properties": {
+        "small": {
+          "type": "number",
+          "required": true,
+          "default": 520,
+          "title": "Pequeña",
+          "inputType": "Number",
+          "validators": ["required", "number"],
+          "help": "Ancho del pixel para un punto pequeño de interrupción, e.g. Teléfonos móviles"
+        },
+        "medium": {
+          "type": "number",
+          "required": true,
+          "default": 760,
+          "title": "Mediano",
+          "inputType": "Number",
+          "validators": ["required", "number"],
+          "help": "Ancho del pixel para un punto mediano de interrupción, e.g. dispositivos tablet"
+        },
+        "large": {
+          "type": "number",
+          "required": true,
+          "default": 900,
+          "title": "Grande",
+          "inputType": "Number",
+          "validators": ["required", "number"],
+          "help": "Ancho del pixel para un punto grande de interrupción, e.g. portatiles/computador de escritorio"
+        }
+      }
+    },
+    "_questionWeight": {
+      "type": "number",
+      "required": true,
+      "default": 1,
+      "isSetting": true,
+      "title": "Peso de la pregunta",
+      "inputType": "Number",
+      "validators": ["required", "number"],
+      "help": "Corresponde al valor que tendra la pregunta"
+    },
+    "_drawer": {
+      "type": "object",
+      "isSetting": false,
+      "title": "Ajustes de transición del cajón",
+      "help": "Las transiciones estan dadas en tres momentos del movimiento, seleccione su preferencia",
+      "properties": {
+        "_showEasing": {
+          "type": "string",
+          "required": true,
+          "default": "easeOutQuart",
+          "title": "Mostrar transiciones asi:",
+          "inputType": {
+            "type": "Select",
+            "options": [
+              {"val": "easeOutSine", "label": "empieza rápido / termina lento"},
+              {"val": "easeInOutSine", "label": "empieza lento / termina lento"},
+              {"val": "easeInQuad", "label": "empieza lento / aumenta rapidez"},
+              {"val": "easeOutQuad", "label": "empieza rápido, disminuye / termina lento"},
+              {"val": "easeInOutQuad", "label": "empieza lento, aumenta / termina lento"},
+              {"val": "easeInCubic", "label": "empieza rápido, aumenta / termina rápido"},
+              {"val": "easeOutCubic", "label": "empieza rápido, aumenta / termina lento, se detiene"},
+              {"val": "easeInOutCubic", "label": "empieza lento, aumenta / termina lento, se detiene"},
+              {"val": "easeInQuart", "label": "empieza lento, mantiene lento / aumenta rapidez"},
+              {"val": "easeOutQuart", "label": "empieza rápido, aumenta abrupto / termina abrupto"},
+              {"val": "easeInOutQuart", "label": "empieza lento, aumenta abrupto / termina abrupto"},
+              {"val": "easeInQuint", "label": "no empieza, aumenta abrupto / aumenta abrupto"},
+              {"val": "easeOutQuint", "label": "empieza abrupto, disminuye / termina lento"},
+              {"val": "easeInOutQuint", "label": "no empieza, aumenta abrupto / termina lento"},
+              {"val": "easeInExpo", "label": "no empieza, aumenta lento / aumenta abrupto"},
+              {"val": "easeOutExpo", "label": "empieza abrupto, disminuye lento / termina lento"},
+              {"val": "easeInOutExpo", "label": "no empieza, aumenta / termina abrupto"},
+              {"val": "easeInCirc", "label": "empieza lento, aumenta lento / aumenta abrupto"},
+              {"val": "easeOutCirc", "label": "empieza abrupto, aumenta lento / termina lento"},
+              {"val": "easeInOutCirc", "label": "empieza lento, aumenta abrupto / termina lento"},
+              {"val": "easeInBack", "label": "empieza lento, se detiene / aumenta abrupto"},
+              {"val": "easeOutBack", "label": "empieza abrupto, se detiene / termina abrupto"},
+              {"val": "easeInOutBack", "label": "no empieza, aumenta lento / termina abrupto"},
+              {"val": "easeInElastic", "label": "no empieza, fluctua / aumenta abrupto"},
+              {"val": "easeOutElastic", "label": "empieza abrupto, fluctua / termina abrupto"},
+              {"val": "easeInOutElastic", "label": "no empieza, aumenta abrupto / termina abrupto"},
+              {"val": "easeInBounce", "label": "fluctua, aumenta abrupto / termina abrupto"},
+              {"val": "easeOutBounce", "label": "aumenta abrupto, fluctua / termina fluctua"},
+              {"val": "easeInOutBounce", "label": "fluctua, fluctua / termina fluctua"}
+            ]
+          },
+          "validators": ["required"],
+          "help": "Indica como estan dadas las transiciones al mostrarse"
+        },
+        "_hideEasing": {
+          "type": "string",
+          "required": true,
+          "default": "easeInQuart",
+          "title": "Ocultar transiciones asi:",
+          "inputType": {
+            "type": "Select",
+            "options": [
+              {"val": "easeOutSine", "label": "empieza rápido / termina lento"},
+              {"val": "easeInOutSine", "label": "empieza lento / termina lento"},
+              {"val": "easeInQuad", "label": "empieza lento / aumenta rapidez"},
+              {"val": "easeOutQuad", "label": "empieza rápido, disminuye / termina lento"},
+              {"val": "easeInOutQuad", "label": "empieza lento, aumenta / termina lento"},
+              {"val": "easeInCubic", "label": "empieza rápido, aumenta / termina rápido"},
+              {"val": "easeOutCubic", "label": "empieza rápido, aumenta / termina lento, se detiene"},
+              {"val": "easeInOutCubic", "label": "empieza lento, aumenta / termina lento, se detiene"},
+              {"val": "easeInQuart", "label": "empieza lento, mantiene lento / aumenta rapidez"},
+              {"val": "easeOutQuart", "label": "empieza rápido, aumenta abrupto / termina abrupto"},
+              {"val": "easeInOutQuart", "label": "empieza lento, aumenta abrupto / termina abrupto"},
+              {"val": "easeInQuint", "label": "no empieza, aumenta abrupto / aumenta abrupto"},
+              {"val": "easeOutQuint", "label": "empieza abrupto, disminuye / termina lento"},
+              {"val": "easeInOutQuint", "label": "no empieza, aumenta abrupto / termina lento"},
+              {"val": "easeInExpo", "label": "no empieza, aumenta lento / aumenta abrupto"},
+              {"val": "easeOutExpo", "label": "empieza abrupto, disminuye lento / termina lento"},
+              {"val": "easeInOutExpo", "label": "no empieza, aumenta / termina abrupto"},
+              {"val": "easeInCirc", "label": "empieza lento, aumenta lento / aumenta abrupto"},
+              {"val": "easeOutCirc", "label": "empieza abrupto, aumenta lento / termina lento"},
+              {"val": "easeInOutCirc", "label": "empieza lento, aumenta abrupto / termina lento"},
+              {"val": "easeInBack", "label": "empieza lento, se detiene / aumenta abrupto"},
+              {"val": "easeOutBack", "label": "empieza abrupto, se detiene / termina abrupto"},
+              {"val": "easeInOutBack", "label": "no empieza, aumenta lento / termina abrupto"},
+              {"val": "easeInElastic", "label": "no empieza, fluctua / aumenta abrupto"},
+              {"val": "easeOutElastic", "label": "empieza abrupto, fluctua / termina abrupto"},
+              {"val": "easeInOutElastic", "label": "no empieza, aumenta abrupto / termina abrupto"},
+              {"val": "easeInBounce", "label": "fluctua, aumenta abrupto / termina abrupto"},
+              {"val": "easeOutBounce", "label": "aumenta abrupto, fluctua / termina fluctua"},
+              {"val": "easeInOutBounce", "label": "fluctua, fluctua / termina fluctua"}
+            ]
+          },
+          "validators": ["required"],
+          "help": "Indica como estan dadas las transiciones al ocultarse"
+        },
+        "_duration": {
+          "type": "number",
+          "required": true,
+          "default": 400,
+          "title": "Duración",
+          "inputType": "Number",
+          "validators": ["required", "number"],
+          "help": "Indica la duración de la transición"
+        }
+      }
+    },
+    "_generateSourcemap": {
+      "type": "boolean",
+      "default": false,
+      "isSetting": true,
+      "inputType": "Checkbox",
+      "validators": [],
+      "title": "Generar mapas fuente",
+      "help": "Permite depurar JavaScript y CSS del recurso a través de las herramientas de desarrollo del navegador."
+    },
+    "_forceRouteLocking": {
+      "type": "boolean",
+      "default": true,
+      "isSetting": true,
+      "inputType": "Checkbox",
+      "validators": [],
+      "title": "¿Hacer cumplir el bloqueo de rutas?",
+      "help": "Si el bloqueo está habilitado y se tiene una página con cualquier tipo de bloqueo. El usuario no puede ir a esta, aún si tiene la url."
+    },
+    "_disableAnimationFor": {
+      "type": "array",
+      "default": [],
+      "title": "Desactivar animación para",
+      "isSetting": true,
+      "inputType": "List",
+      "help": "Le permite deshabilitar algunas animaciones (p. ej., la animación de cierre del cajón) en plataformas en las que no funcionan bien, utilizando selectores de CSS para apuntar a las plataformas relevantes a través de las clases en el elemento HTML."
+    },
+    "_logging": {
+      "type": "object",
+      "title": "Comportamiento del registro",
+      "help": "Específica las opciones para determinar el tipo y salida de los registros",
+      "properties": {
+        "_isEnabled": {
+          "type": "boolean",
+          "default": true,
+          "required": true,
+          "inputType": "Checkbox",
+          "validators": [],
+          "title": "¿Activar?",
+          "help": "Activar o desactivar la salida de registros"
+        },
+        "_level": {
+          "type": "string",
+          "required": true,
+          "default" : "info",
+          "title" : "Nivel de registro",
+          "help": "Define el tipo de registro que se muestra",
+          "validators": [],
+          "inputType": {
+            "type": "Select",
+            "options": [
+              {"val": "debug", "label": "Depuración"},
+              {"val": "info", "label": "Información"},
+              {"val": "warn", "label": "Advertencia"},
+              {"val": "error", "label": "Errores"},
+              {"val": "fatal", "label": "Crítico"}
+            ]
+          }
+        },
+        "_console": {
+          "type": "boolean",
+          "default": true,
+          "inputType": "Checkbox",
+          "validators": [],
+          "title": "¿Permitir registro en la consola del navegador web?",
+          "help": "Si se activa, el registro se muestra en la consola del navegador"
+        },
+        "_warnFirstOnly": {
+          "type": "boolean",
+          "default": true,
+          "inputType": "Checkbox",
+          "validators": [],
+          "title": "¿Mostrar solo las primeras advertencias obsoletas y eliminadas?",
+          "help": "Muestra solo los primeros registros en la consola del navegador"
+        }
+      }
+    },
+    "_scrollingContainer": {
+      "type": "object",
+      "title": "Soporte de desplazamiento de iFrame y lectura de pantalla",
+      "properties" : {
+        "_isEnabled": {
+          "type": "boolean",
+          "default": false,
+          "required": true,
+          "inputType": "Checkbox",
+          "validators": [],
+          "title": "¿Activar?"
+        },
+        "_limitToSelector": {
+          "type": "string",
+          "required": false,
+          "default": "",
+          "title": "Límite de selector",
+          "inputType": "Text",
+          "validators": [],
+          "help": "Selector de CSS para que coincida con el elemento HTML al determinar si debe estar activo o no."
+        }
+      }
+    },
+    "themeSettings": {
+      "type": "object",
+      "title": "Configuraciones del tema"
+    },
+    "_themePreset": {
+      "type": "objectid",
+      "required": false
+    }
+  }
+}

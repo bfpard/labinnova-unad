@@ -1,0 +1,14 @@
+{
+  "name": "adapt-gtag",
+  "version": "10.1.0",
+  "framework": ">=5.0.0",
+  "displayName": "Analítica de datos de Google 4",
+  "extension": "gtag",
+  "targetAttribute": "_gtag",
+  "description": "Analítica de datos de Google 4 en Adapt",
+  "main": "/js/adapt-gtag.js",
+  "keywords": ["adapt-plugin", "adapt-extension"],
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/wtechsas/adapt-gtag",
+  "bugs": "https://github.com/wtechsas/adapt-gtag/issues"
+}

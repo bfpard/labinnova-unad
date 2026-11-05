@@ -1,0 +1,265 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "required": false,
+  "globals": {
+    "resources": {
+      "type": "string",
+      "required": true,
+      "title": "Recursos adicionales",
+      "default": "Recursos adicionales.",
+      "inputType": "Text",
+      "validators": [],
+      "translatable": true
+    }
+  },
+  "properties": {
+    "pluginLocations": {
+      "type": "object",
+      "required": true,
+      "properties": {
+        "config": {
+          "type": "object"
+        },
+        "course": {
+          "type": "object",
+          "properties": {
+            "_resources": {
+              "type": "object",
+              "required": false,
+              "legend": "Recursos adicionales",
+              "properties": {
+                "_isEnabled": {
+                  "type": "boolean",
+                  "required": true,
+                  "default": false,
+                  "title": "¿Habilitado?",
+                  "inputType": "Checkbox",
+                  "validators": [],
+                  "help": "Controla si la extensión Recursos adicionales está habilitada o deshabilitada."
+                },
+                "_drawerOrder": {
+                  "type": "number",
+                  "required": false,
+                  "title": "Orden",
+                  "inputType": "Number",
+                  "default": 0,
+                  "help": "Orden en el que la extensión debe aparecer como elemento",
+                  "validators": [
+                    "number"
+                  ]
+                },
+                "title": {
+                  "type": "string",
+                  "default": "Recursos adicionales",
+                  "required": true,
+                  "title": "Título",
+                  "inputType": "Text",
+                  "validators": [
+                    "required"
+                  ],
+                  "help": "Corresponde al título del recurso adicional.",
+                  "translatable": true
+                },
+                "description": {
+                  "type": "string",
+                  "default": "Aquí se pueden ver los recursos adicionales de este Recurso",
+                  "required": false,
+                  "title": "Descripción",
+                  "inputType": "Text",
+                  "validators": [],
+                  "help":"Indica la descripción de los recursos adicionales.",
+                  "translatable": true
+                },
+                "_filterButtons": {
+                  "type": "object",
+                  "title": "Botones para filtrar",
+                  "help": "Establece los textos de los botones para filtrar recursos.",
+                  "properties": {
+                    "all": {
+                      "type": "string",
+                      "default": "Todos",
+                      "title": "Todos los recursos",
+                      "inputType": "Text",
+                      "validators": [],
+                      "help":"Texto del botón para mostrar todos los recursos.",
+                      "translatable": true
+                    },
+                    "document": {
+                      "type": "string",
+                      "default": "Documentos",
+                      "title": "Documentos",
+                      "inputType": "Text",
+                      "validators": [],
+                      "help":"Texto del botón para mostrar los recursos de tipo documento.",
+                      "translatable": true
+                    },
+                    "media": {
+                      "type": "string",
+                      "default": "Recursos multimedia",
+                      "title": "Multimedia",
+                      "inputType": "Text",
+                      "validators": [],
+                      "help":"Texto del botón para mostrar los recursos de tipo multimedia.",
+                      "translatable": true
+                    },
+                    "link": {
+                      "type": "string",
+                      "default": "Enlaces",
+                      "title": "Enlaces",
+                      "inputType": "Text",
+                      "validators": [],
+                      "help":"Texto del botón para mostrar los recursos de tipo enlace.",
+                      "translatable": true
+                    }
+                  }
+                },
+                "_filterAria": {
+                  "type": "object",
+                  "title": "Etiquetas Aria",
+                  "help":"Estable el texto de las etiquetas Aria.",
+                  "properties": {
+                    "allAria": {
+                      "type": "string",
+                      "default": "Ver todos los recursos",
+                      "title": "Todos los recursos",
+                      "inputType": "Text",
+                      "validators": [],
+                      "help":"Etiqueta Aria para mostrar todos los recursos.",
+                      "translatable": true
+                    },
+                    "documentAria": {
+                      "type": "string",
+                      "default": "Ver recursos de documentos",
+                      "title": "Documentos",
+                      "inputType": "Text",
+                      "validators": [],
+                      "help":"Etiqueta Aria para mostrar los recursos de documentos.",
+                      "translatable": true
+                    },
+                    "mediaAria": {
+                      "type": "string",
+                      "default": "Ver recursos multimedia",
+                      "title": "Recursos multimedia",
+                      "inputType": "Text",
+                      "validators": [],
+                      "help":"Etiqueta Aria para mostrar los recursos de multimedia.",
+                      "translatable": true
+                    },
+                    "linkAria": {
+                      "type": "string",
+                      "default": "Ver enlaces",
+                      "title": "Enlaces",
+                      "inputType": "Text",
+                      "validators": [],
+                      "help":"Etiqueta Aria para mostrar los recursos de enlaces.",
+                      "translatable": true
+                    }
+                  }
+                },
+                "_resourcesItems": {
+                  "type": "array",
+                  "required": false,
+                  "title": "Elementos de recursos adicionales",
+                  "help": "Permite agregar nuevos recursos.",
+                  "items": {
+                    "type": "object",
+                    "required": false,
+                    "title": "Recursos adicionales",
+                    "properties": {
+                      "_type": {
+                        "type": "string",
+                        "required": true,
+                        "title": "Tipo de recurso",
+                        "help":"Corresponde al tipo de recurso.",
+                        "inputType": {
+                          "type": "Select",
+                          "options": [
+                            {
+                              "val": "document",
+                              "label": "Documento"
+                            },
+                            {
+                              "val": "media",
+                              "label": "Multimedia"
+                            },
+                            {
+                              "val": "link",
+                              "label": "Enlace"
+                            }
+                          ]
+                        },
+                        "validators": [
+                          "required"
+                        ]
+                      },
+                      "_forceDownload": {
+                        "type": "boolean",
+                        "default": false,
+                        "title": "Descargar recurso",
+                        "inputType": "Checkbox",
+                        "validators": [],
+                        "help": "Obliga a descargar el recurso en lugar de abrirlo en el navegador. Solo se admite en los navegadores que admiten el atributo 'descargar' y para los recursos que forman parte del contenido del Recurso/que se alojan en la misma URL."
+                      },
+                      "title": {
+                        "type": "string",
+                        "required": true,
+                        "title": "Título",
+                        "inputType": "Text",
+                        "validators": [
+                          "required"
+                        ],
+                        "help": "Indica el título del recurso adicional.",
+                        "translatable": true
+                      },
+                      "filename": {
+                        "type": "string",
+                        "required": false,
+                        "title": "Nombre del archivo",
+                        "inputType": "Text",
+                        "translatable": true,
+                        "help": "Se utiliza para establecer el nombre del archivo descargado en algo diferente al nombre del archivo de origen. Solo se admite en navegadores que admiten el atributo 'descargar' y para recursos que forman parte del contenido del Recurso/alojados en la misma URL. Obliga a que se descargue el archivo independientemente de la configuración de 'Forzar descarga'."
+                      },
+                      "description": {
+                        "type": "string",
+                        "required": false,
+                        "title": "Descripción",
+                        "inputType": "Text",
+                        "validators": [],
+                        "help":"Indica la descripción del recurso adicional.",
+                        "translatable": true
+                      },
+                      "_link": {
+                        "type": "string",
+                        "required": true,
+                        "title": "Enlace",
+                        "inputType": "Asset",
+                        "help":"Indica el origen del enlace del recurso adicional",
+                        "validators": [
+                          "required"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "contentobject": {
+          "type": "object"
+        },
+        "article": {
+          "type": "object"
+        },
+        "block": {
+          "type": "object"
+        },
+        "component": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}
