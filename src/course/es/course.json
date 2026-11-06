@@ -1,6 +1,6 @@
 {
-  "title": "Prueba",
-  "displayTitle": "Prueba",
+  "title": "REDI aprendiendo las vocales.",
+  "displayTitle": "Aprendamos las vocales.",
   "body": "<p><br /><span style=\"font-size:16px;\"><span style=\"font-variant: normal; white-space: pre-wrap;\"><span style=\"font-family:'Times New Roman',serif\"><span style=\"color:#000000\"><span style=\"font-weight:400\"><span style=\"font-style:normal\"><span style=\"text-decoration:none\">Recurso digital gamificado en el que los niños deben superar diferentes retos relacionados con las vocales, donde la participación se realiza por medio de botones interactivos</span></span></span></span></span></span></span></p>",
   "typeCourse": "RDE",
   "subtitle": "Exploradores de vocales ",
@@ -45,7 +45,7 @@
   },
   "_globals": {
     "_accessibility": {
-      "accessibilityToggleTextOn": "¿Habilitar accesibilidad?",
+      "accessibilityToggleTextOn": "Si",
       "accessibilityToggleTextOff": "¿Deshabilitar accesibilidad?",
       "_accessibilityInstructions": {
         "touch": "Instrucciones de uso. Deslizar el dedo hacia la izquierda para ver lo siguiente. Deslizar el dedo hacia la derecha para ver lo anterior. Utilizar doble toque de pantalla para seleccionar. Usar los dos dedos para desplazarse hacia arriba o abajo en la página.",
@@ -231,7 +231,7 @@
   },
   "_visua11y": {
     "_isEnabled": true,
-    "_shouldSavePreferences": false,
+    "_shouldSavePreferences": true,
     "title": "Controles de accesibilidad visual",
     "body": "Utilice los controles que aparecen a continuación para personalizar su experiencia de aprendizaje según sus necesidades individuales.",
     "_groups": {
@@ -368,9 +368,9 @@
       "_small": ""
     },
     "_backgroundStyles": {
-      "_backgroundRepeat": null,
-      "_backgroundSize": null,
-      "_backgroundPosition": "right bottom"
+      "_backgroundRepeat": "no-repeat",
+      "_backgroundSize": "auto",
+      "_backgroundPosition": "center center"
     },
     "_menuHeader": {
       "_backgroundImage": {
@@ -379,14 +379,14 @@
         "_small": ""
       },
       "_backgroundStyles": {
-        "_backgroundRepeat": null,
+        "_backgroundRepeat": "no-repeat",
         "_backgroundSize": null,
         "_backgroundPosition": null
       },
       "_minimumHeights": {
-        "_large": null,
+        "_large": 0,
         "_medium": null,
-        "_small": null
+        "_small": 30
       }
     }
   }
