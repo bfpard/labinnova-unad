@@ -11,14 +11,14 @@
     "linkText": "Ver",
     "duration": "",
     "_lockedBy": [],
-    "_lockType": "unlockFirst",
+    "_lockType": "",
     "_isOptional": false,
     "_isAvailable": true,
     "_isHidden": false,
     "_isVisible": true,
     "_requireCompletionOf": -1,
     "_ariaLevel": 0,
-    "_id": "6aed141858891ba4767ea052",
+    "_id": "6ae6cd2aaec7e386368dda34",
     "_parentId": "course",
     "_type": "menu",
     "_graphic": {
@@ -46,13 +46,13 @@
     "_vanilla": {
       "_backgroundImage": {
         "_large": "",
-        "_medium": "course/es/assets/551f9739197b0e31785f40e3ac719eaf4adf365e.jpg",
+        "_medium": "",
         "_small": ""
       },
       "_backgroundStyles": {
-        "_backgroundRepeat": "no-repeat",
-        "_backgroundSize": "100% 100%",
-        "_backgroundPosition": "center center"
+        "_backgroundRepeat": null,
+        "_backgroundSize": null,
+        "_backgroundPosition": null
       },
       "_responsiveClasses": {
         "_large": "",
@@ -66,7 +66,7 @@
           "_small": ""
         },
         "_backgroundStyles": {
-          "_backgroundRepeat": "no-repeat",
+          "_backgroundRepeat": null,
           "_backgroundSize": null,
           "_backgroundPosition": null
         },
@@ -97,8 +97,8 @@
     "_isVisible": true,
     "_requireCompletionOf": -1,
     "_ariaLevel": 0,
-    "_id": "6aed141858891ba4767ea054",
-    "_parentId": "6aed141858891ba4767ea052",
+    "_id": "6ae6cd2eaec7e386368dda35",
+    "_parentId": "6ae6cd2aaec7e386368dda34",
     "_type": "page",
     "_graphic": {
       "alt": "",
@@ -176,8 +176,87 @@
     "_isVisible": true,
     "_requireCompletionOf": -1,
     "_ariaLevel": 0,
-    "_id": "6aed141858891ba4767ea058",
-    "_parentId": "6aed141858891ba4767ea053",
+    "_id": "6ae8dc91aec7e386368ddbb9",
+    "_parentId": "6ae8db97aec7e386368ddbb3",
+    "_type": "page",
+    "_graphic": {
+      "alt": "",
+      "src": ""
+    },
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_showPageCompletion": true,
+      "_isCompletionIndicatorEnabled": false,
+      "_excludeAssessments": false
+    },
+    "_bookmarking": {
+      "_isEnabled": true,
+      "_level": "inherit"
+    },
+    "_boxMenu": {
+      "_renderAsGroup": false
+    },
+    "_vanilla": {
+      "_backgroundImage": {
+        "_large": "",
+        "_medium": "",
+        "_small": ""
+      },
+      "_backgroundStyles": {
+        "_backgroundRepeat": null,
+        "_backgroundSize": null,
+        "_backgroundPosition": null
+      },
+      "_responsiveClasses": {
+        "_large": "",
+        "_medium": "",
+        "_small": ""
+      },
+      "_pageHeader": {
+        "_backgroundImage": {
+          "_large": "",
+          "_medium": "",
+          "_small": ""
+        },
+        "_backgroundStyles": {
+          "_backgroundRepeat": null,
+          "_backgroundSize": null,
+          "_backgroundPosition": null
+        },
+        "_minimumHeights": {
+          "_large": null,
+          "_medium": null,
+          "_small": null
+        }
+      }
+    }
+  },
+  {
+    "title": "🔎🌈 ¡Exploradores en acción: aprender es una aventura!",
+    "displayTitle": "🔎🌈 ¡Exploradores en acción: aprender es una aventura!",
+    "body": "",
+    "_classes": "",
+    "subtitle": "¡Prepárate para descubrir, jugar y aprender!",
+    "pageBody": "",
+    "instruction": "",
+    "_htmlClasses": "",
+    "linkText": "Ver",
+    "duration": "",
+    "_lockedBy": [],
+    "_lockType": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_requireCompletionOf": -1,
+    "_ariaLevel": 0,
+    "_id": "6ae77760aec7e386368dda46",
+    "_parentId": "6ae6cd2aaec7e386368dda34",
     "_type": "page",
     "_graphic": {
       "alt": "",
@@ -255,88 +334,9 @@
     "_isVisible": true,
     "_requireCompletionOf": -1,
     "_ariaLevel": 0,
-    "_id": "6aed141858891ba4767ea053",
+    "_id": "6ae8db97aec7e386368ddbb3",
     "_parentId": "course",
     "_type": "menu",
-    "_graphic": {
-      "alt": "",
-      "src": ""
-    },
-    "_onScreen": {
-      "_isEnabled": false,
-      "_classes": "",
-      "_percentInviewVertical": 50
-    },
-    "_pageLevelProgress": {
-      "_isEnabled": true,
-      "_showPageCompletion": true,
-      "_isCompletionIndicatorEnabled": false,
-      "_excludeAssessments": false
-    },
-    "_bookmarking": {
-      "_isEnabled": true,
-      "_level": "inherit"
-    },
-    "_boxMenu": {
-      "_renderAsGroup": false
-    },
-    "_vanilla": {
-      "_backgroundImage": {
-        "_large": "",
-        "_medium": "",
-        "_small": ""
-      },
-      "_backgroundStyles": {
-        "_backgroundRepeat": null,
-        "_backgroundSize": null,
-        "_backgroundPosition": null
-      },
-      "_responsiveClasses": {
-        "_large": "",
-        "_medium": "",
-        "_small": ""
-      },
-      "_pageHeader": {
-        "_backgroundImage": {
-          "_large": "",
-          "_medium": "",
-          "_small": ""
-        },
-        "_backgroundStyles": {
-          "_backgroundRepeat": null,
-          "_backgroundSize": null,
-          "_backgroundPosition": null
-        },
-        "_minimumHeights": {
-          "_large": null,
-          "_medium": null,
-          "_small": null
-        }
-      }
-    }
-  },
-  {
-    "title": "🔎🌈 ¡Exploradores en acción: aprender es una aventura!",
-    "displayTitle": "🔎🌈 ¡Exploradores en acción: aprender es una aventura!",
-    "body": "",
-    "_classes": "",
-    "subtitle": "¡Prepárate para descubrir, jugar y aprender!",
-    "pageBody": "",
-    "instruction": "",
-    "_htmlClasses": "",
-    "linkText": "Ver",
-    "duration": "",
-    "_lockedBy": [],
-    "_lockType": "",
-    "_isOptional": false,
-    "_isAvailable": true,
-    "_isHidden": false,
-    "_isVisible": true,
-    "_requireCompletionOf": -1,
-    "_ariaLevel": 0,
-    "_id": "6aed141858891ba4767ea055",
-    "_parentId": "6aed141858891ba4767ea052",
-    "_type": "page",
     "_graphic": {
       "alt": "",
       "src": ""
@@ -413,8 +413,8 @@
     "_isVisible": true,
     "_requireCompletionOf": -1,
     "_ariaLevel": 0,
-    "_id": "6aed141858891ba4767ea059",
-    "_parentId": "6aed141858891ba4767ea053",
+    "_id": "6ae8e31aaec7e386368ddbd0",
+    "_parentId": "6ae8db97aec7e386368ddbb3",
     "_type": "page",
     "_graphic": {
       "alt": "",
@@ -492,8 +492,8 @@
     "_isVisible": true,
     "_requireCompletionOf": -1,
     "_ariaLevel": 0,
-    "_id": "6aed141858891ba4767ea056",
-    "_parentId": "6aed141858891ba4767ea052",
+    "_id": "6ae7bc6eaec7e386368ddac5",
+    "_parentId": "6ae6cd2aaec7e386368dda34",
     "_type": "page",
     "_graphic": {
       "alt": "",
@@ -571,8 +571,8 @@
     "_isVisible": true,
     "_requireCompletionOf": -1,
     "_ariaLevel": 0,
-    "_id": "6aed141858891ba4767ea05a",
-    "_parentId": "6aed141858891ba4767ea053",
+    "_id": "6ae8e431aec7e386368ddbe0",
+    "_parentId": "6ae8db97aec7e386368ddbb3",
     "_type": "page",
     "_graphic": {
       "alt": "",
@@ -650,8 +650,8 @@
     "_isVisible": true,
     "_requireCompletionOf": -1,
     "_ariaLevel": 0,
-    "_id": "6aed141858891ba4767ea057",
-    "_parentId": "6aed141858891ba4767ea052",
+    "_id": "6ae8c7b5aec7e386368ddb78",
+    "_parentId": "6ae6cd2aaec7e386368dda34",
     "_type": "page",
     "_graphic": {
       "alt": "",
@@ -729,8 +729,8 @@
     "_isVisible": true,
     "_requireCompletionOf": -1,
     "_ariaLevel": 0,
-    "_id": "6aed141858891ba4767ea05b",
-    "_parentId": "6aed141858891ba4767ea053",
+    "_id": "6ae8e8e9aec7e386368ddbe8",
+    "_parentId": "6ae8db97aec7e386368ddbb3",
     "_type": "page",
     "_graphic": {
       "alt": "",
